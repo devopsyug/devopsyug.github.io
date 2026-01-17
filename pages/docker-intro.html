@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps YUG - Documentation Hub</title>
+    <title>Docker Introduction - DevOps YUG</title>
     <style>
         * {
             margin: 0;
@@ -18,7 +18,6 @@
             height: 100vh;
         }
 
-        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -39,7 +38,6 @@
             font-weight: 600;
         }
 
-        /* Main Container */
         .container {
             display: flex;
             width: 100%;
@@ -47,7 +45,6 @@
             height: calc(100vh - 60px);
         }
 
-        /* Sidebar */
         .sidebar {
             width: 280px;
             background-color: #2c3e50;
@@ -108,7 +105,6 @@
             background-color: #34495e;
         }
 
-        /* Main Content Area */
         .main-content {
             flex: 1;
             display: flex;
@@ -134,7 +130,6 @@
             font-size: 14px;
         }
 
-        /* Content Area */
         .content-body {
             flex: 1;
             overflow-y: auto;
@@ -192,7 +187,6 @@
             line-height: 1.4;
         }
 
-        /* Scrollbar Styling */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -210,7 +204,6 @@
             background: #555;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .sidebar {
                 position: fixed;
@@ -256,96 +249,120 @@
     </header>
 
     <div class="container">
-        <!-- Sidebar Navigation -->
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-section">
                 <div class="sidebar-title">Getting Started</div>
                 <ul class="sidebar-list">
-                    <li class="active"><a href="index.html">Welcome</a></li>
-                    <li><a href="pages/setup.html">Initial Setup</a></li>
-                    <li><a href="pages/basics.html">Basics</a></li>
+                    <li><a href="../index.html">Welcome</a></li>
+                    <li><a href="setup.html">Initial Setup</a></li>
+                    <li><a href="basics.html">Basics</a></li>
                 </ul>
             </div>
 
             <div class="sidebar-section">
                 <div class="sidebar-title">Docker</div>
                 <ul class="sidebar-list">
-                    <li><a href="pages/docker-intro.html">Introduction</a></li>
-                    <li><a href="pages/docker-containers.html">Containers</a></li>
-                    <li><a href="pages/docker-compose.html">Docker Compose</a></li>
-                    <li><a href="pages/docker-registry.html">Registry & Images</a></li>
+                    <li class="active"><a href="docker-intro.html">Introduction</a></li>
+                    <li><a href="docker-containers.html">Containers</a></li>
+                    <li><a href="docker-compose.html">Docker Compose</a></li>
+                    <li><a href="docker-registry.html">Registry & Images</a></li>
                 </ul>
             </div>
 
             <div class="sidebar-section">
                 <div class="sidebar-title">Kubernetes</div>
                 <ul class="sidebar-list">
-                    <li><a href="pages/k8s-intro.html">Introduction</a></li>
-                    <li><a href="pages/k8s-deployment.html">Deployments</a></li>
-                    <li><a href="pages/k8s-services.html">Services</a></li>
-                    <li><a href="pages/k8s-helm.html">Helm</a></li>
+                    <li><a href="k8s-intro.html">Introduction</a></li>
+                    <li><a href="k8s-deployment.html">Deployments</a></li>
+                    <li><a href="k8s-services.html">Services</a></li>
+                    <li><a href="k8s-helm.html">Helm</a></li>
                 </ul>
             </div>
 
             <div class="sidebar-section">
                 <div class="sidebar-title">CI/CD</div>
                 <ul class="sidebar-list">
-                    <li><a href="pages/cicd-intro.html">Introduction</a></li>
-                    <li><a href="pages/jenkins.html">Jenkins</a></li>
-                    <li><a href="pages/gitlab-ci.html">GitLab CI</a></li>
-                    <li><a href="pages/github-actions.html">GitHub Actions</a></li>
+                    <li><a href="cicd-intro.html">Introduction</a></li>
+                    <li><a href="jenkins.html">Jenkins</a></li>
+                    <li><a href="gitlab-ci.html">GitLab CI</a></li>
+                    <li><a href="github-actions.html">GitHub Actions</a></li>
                 </ul>
             </div>
 
             <div class="sidebar-section">
                 <div class="sidebar-title">Infrastructure</div>
                 <ul class="sidebar-list">
-                    <li><a href="pages/terraform.html">Terraform</a></li>
-                    <li><a href="pages/ansible.html">Ansible</a></li>
-                    <li><a href="pages/monitoring.html">Monitoring</a></li>
+                    <li><a href="terraform.html">Terraform</a></li>
+                    <li><a href="ansible.html">Ansible</a></li>
+                    <li><a href="monitoring.html">Monitoring</a></li>
                 </ul>
             </div>
         </aside>
 
-        <!-- Main Content Area -->
         <main class="main-content">
             <div class="content-header">
-                <h2 id="page-title">Welcome to DevOps YUG</h2>
-                <p id="page-subtitle">Your comprehensive guide to DevOps tools and practices</p>
+                <h2>Docker Introduction</h2>
+                <p>Get started with containerization using Docker</p>
             </div>
 
-            <div class="content-body" id="content-body">
-                <h3>Getting Started</h3>
-                <p>Welcome to the DevOps YUG! This is your one-stop resource for learning about modern DevOps practices, tools, and technologies.</p>
+            <div class="content-body">
+                <h3>What is Docker?</h3>
+                <p>Docker is a containerization platform that allows you to package applications and their dependencies into standardized units called containers. These containers ensure that your application runs the same way regardless of where the container is deployed.</p>
 
-                <h3>What You'll Find Here</h3>
+                <h3>Key Benefits</h3>
                 <ul>
-                    <li><strong>Docker Tutorials:</strong> Learn containerization and best practices</li>
-                    <li><strong>Kubernetes Guide:</strong> Master container orchestration</li>
-                    <li><strong>CI/CD Pipelines:</strong> Automate your deployment process</li>
-                    <li><strong>Infrastructure as Code:</strong> Terraform and Ansible tutorials</li>
-                    <li><strong>Monitoring Solutions:</strong> Keep track of your systems</li>
+                    <li><strong>Consistency:</strong> Containers ensure your app runs the same in development, testing, and production</li>
+                    <li><strong>Portability:</strong> Deploy containers anywhere - your laptop, servers, or cloud platforms</li>
+                    <li><strong>Scalability:</strong> Easily scale applications by running multiple container instances</li>
+                    <li><strong>Resource Efficiency:</strong> Containers are lightweight and use fewer resources than virtual machines</li>
+                    <li><strong>Microservices:</strong> Build and deploy microservices-based architectures</li>
                 </ul>
 
-                <h3>How to Use This YUG</h3>
-                <p>Use the navigation menu on the left to browse different topics. Each section contains detailed tutorials, best practices, and code examples.</p>
+                <h3>Core Concepts</h3>
+                <p><strong>Images:</strong> A blueprint for creating containers. Images are built from a Dockerfile and contain all the code, runtime, and dependencies needed to run an application.</p>
+                <p><strong>Containers:</strong> Running instances of Docker images. Containers are isolated and include everything needed to run the application.</p>
+                <p><strong>Registries:</strong> Repositories where Docker images are stored and shared. Docker Hub is the most popular public registry.</p>
 
-                <h3>Quick Start</h3>
-                <p>To add new tutorial pages:</p>
-                <ol>
-                    <li>Create a new HTML file in your project folder</li>
-                    <li>Add a new link in the sidebar list above</li>
-                    <li>Update the <code>loadContent()</code> function to handle the new page</li>
-                    <li>Create corresponding content files or update the function with inline content</li>
-                </ol>
+                <h3>Basic Docker Commands</h3>
+                <p>Here are some essential Docker commands to get you started:</p>
+                <pre>
+# Pull an image from Docker Hub
+docker pull ubuntu
 
-                <h3>Example Code</h3>
-                <pre>// Sample JavaScript to load different content
-function loadContent(page) {
-    // Load content based on page parameter
-    console.log('Loading: ' + page);
-}
+# List downloaded images
+docker images
+
+# Run a container
+docker run -it ubuntu
+
+# List running containers
+docker ps
+
+# List all containers (including stopped)
+docker ps -a
+
+# Stop a running container
+docker stop &lt;container_id&gt;
+
+# Remove a container
+docker rm &lt;container_id&gt;
                 </pre>
+
+                <h3>Your First Docker Container</h3>
+                <p>To run your first Docker container, use the following command:</p>
+                <pre>
+docker run hello-world
+                </pre>
+                <p>This will download and run the <code>hello-world</code> image, which prints a welcome message and exits.</p>
+
+                <h3>Next Steps</h3>
+                <p>Now that you understand the basics of Docker, you can explore:</p>
+                <ul>
+                    <li>Building custom Docker images with Dockerfiles</li>
+                    <li>Managing containers with Docker Compose</li>
+                    <li>Pushing images to Docker registries</li>
+                    <li>Running containers in production with orchestration tools like Kubernetes</li>
+                </ul>
             </div>
         </main>
     </div>
@@ -355,7 +372,6 @@ function loadContent(page) {
             document.getElementById('sidebar').classList.toggle('active');
         }
 
-        // Close sidebar when clicking outside on mobile
         document.addEventListener('click', function(event) {
             const sidebar = document.getElementById('sidebar');
             const toggle = document.querySelector('.menu-toggle');
@@ -366,21 +382,6 @@ function loadContent(page) {
                 }
             }
         });
-
-        // Set active page based on current URL
-        function setActivePage() {
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            document.querySelectorAll('.sidebar-list li').forEach(li => {
-                const link = li.querySelector('a');
-                if (link && link.href.includes(currentPage)) {
-                    li.classList.add('active');
-                } else {
-                    li.classList.remove('active');
-                }
-            });
-        }
-
-        setActivePage();
     </script>
 </body>
 </html>
